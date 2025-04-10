@@ -6,3 +6,10 @@ local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
 o.relativenumber = true
+
+-- Add yank highlight config
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank({ higroup = 'IncSearch', timeout = 200 })
+  end,
+})
