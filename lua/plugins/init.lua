@@ -6,12 +6,10 @@ return {
   },
 
   {
-  "lervag/vimtex",
-  init = function()
-    -- put vim.g.vimtex_* settings here
-    vim.g.vimtex_syntax_enabled = 0
-    vim.g.vimtex_compiler_latexmk = { }
-  end
+    "lervag/vimtex",
+    lazy=false,
+    init = function()
+    end
   },
 
   -- These are some examples, uncomment them if you want to see them work!
