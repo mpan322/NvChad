@@ -1,8 +1,17 @@
+
+local nav_conf = require "configs.tmux-navigator"
+
 return {
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
+  },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    cmd = nav_conf.cmd,
+    keys = nav_conf.keys,
   },
 
   {
@@ -22,11 +31,6 @@ return {
 
   {
   	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css"
-  		},
-  	},
+  	opts = require "configs.treesitter",
   },
 }
