@@ -1,4 +1,3 @@
-
 local nav_conf = require "configs.tmux-navigator"
 
 return {
@@ -16,9 +15,8 @@ return {
 
   {
     "lervag/vimtex",
-    lazy=false,
-    init = function()
-    end
+    lazy = false,
+    init = function() end,
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -30,7 +28,16 @@ return {
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = require "configs.treesitter",
+    "kylechui/nvim-surround",
+    version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require "configs.surround"
+    end,
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = require "configs.treesitter",
   },
 }
