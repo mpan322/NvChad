@@ -6,8 +6,9 @@ local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
 
 o.relativenumber = true
-o.spell = true
-o.spelllang = "en_gb"
+-- o.spell = true
+-- o.spelllang = "en_gb"
+o.shell="zsh"
 
 -- Add yank highlight config
 vim.api.nvim_create_autocmd('TextYankPost', {

@@ -1,7 +1,8 @@
 local opts =  {
   ensure_installed = {
   	"vim", "lua", "vimdoc",
-    "html", "css", "gleam"
+    "html", "css", "gleam",
+    "zig", "c"
   },
 };
 
