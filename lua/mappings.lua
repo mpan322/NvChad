@@ -7,7 +7,7 @@ local unmap = vim.keymap.del
 
 unmap("n", "<A-h>")
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
+-- map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 map("n", "<C-j>", "<cmd>cnext<CR>")
